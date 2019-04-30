@@ -51,7 +51,7 @@ async def trial(ctx):
         tag = random.choice(role.members)
         print('selected ' + str(tag) + ' as recruiter for ' + str(author))
         trial = "selected " + str(tag) + " as recruiter for " + str(author)
-        me: discord.Member = DM
+        me = guild.get_member(DM)
         await ctx.send("Welcome {}".format(author.mention) + ", thanks for applying. {}".format(author.mention) + " has been assigned to you.")
         await me.send(trial)
         
