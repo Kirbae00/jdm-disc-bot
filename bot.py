@@ -30,6 +30,13 @@ async def multiply(ctx, a: int, b: int):
 async def greet(ctx):
     await ctx.send(":smiley: :wave: Hello, there!")
 
+@bot.command(pass_context=True)
+@commands.has_role("Team Recruiter \U0001F3AE") # This must be exactly the name of the appropriate role
+async def accept(ctx, user):
+    member = user
+    role = get(member.server.roles, name="Trial")
+    await bot.add_roles(member, role)    
+    
 @bot.command()
 async def trial(ctx):
      author = ctx.message.author
