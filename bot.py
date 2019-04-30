@@ -63,7 +63,7 @@ async def info(ctx):
     embed.add_field(name="Author", value="<@160455573324824576>")
 
 # Shows the number of servers the bot is member of.
-    embed.add_field(name="Slide's twitch channel", value="[Twitch] :JDM: (<https://www.twitch.tv/mobyinkface>)")
+    embed.add_field(name="Slide's twitch channel", value="[Twitch](<https://www.twitch.tv/mobyinkface>)")
 
 # give users a link to invite thsi bot to their server
     embed.add_field(name="Invite", value="[Invite link](<https://discordapp.com/api/oauth2/authorize?client_id=572406563873226753&permissions=268781568&scope=bot>)")
