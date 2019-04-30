@@ -33,7 +33,7 @@ async def greet(ctx):
 @bot.command()
 async def trial(ctx):
      author = ctx.message.author
-     role = discord.utils.get(ctx.message.guild.roles, name="Team Recruiter")
+     role = discord.utils.get(ctx.message.guild.roles, name="Team Recruiter \U0001F3AE")
      if role is None:
         await bot.say('There is no "Team Recruiter" role on this server!')
         return
