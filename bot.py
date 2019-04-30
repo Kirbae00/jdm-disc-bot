@@ -1,11 +1,11 @@
 import os, discord, random
-from discord.ext.commands import Bot
+from discord.ext import commands
 
 # We'll need to substitute the Prefix for an Enviroment Variable
 BOT_PREFIX = os.environ['prefix'] # -Prfix is need to declare a Command in discord ex: !pizza "!" being the Prefix
 TOKEN = os.environ['token'] # The token is also substituted for security reasons
 
-client = Bot(command_prefix=BOT_PREFIX)
+bot = commands.Bot(command_prefix=BOT_PREFIX)
 
 
 @bot.event
