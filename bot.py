@@ -19,9 +19,12 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('------')
+    print('Owner: Kirbae#0001')
+    print('------')
     servers = list(bot.guilds)
     print('Connected on '+ str(len(servers)) + ' servers:')
     print('\n'.join(server.name for server in servers))
+    print('------')
 
 @bot.command()
 async def add(ctx, a: int, b: int):
