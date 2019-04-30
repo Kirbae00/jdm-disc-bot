@@ -36,6 +36,7 @@ async def greet(ctx):
 async def accept(ctx, user: discord.Member):
     role = discord.utils.get(ctx.message.guild.roles, name="Trial")
     await user.add_roles(role)    
+    await ctx.send("Congratulations, Contact {}".format(author.mention) + "Recruiter to arange a date and time")
     
 @bot.command(pass_context=True)
 async def trial(ctx):
