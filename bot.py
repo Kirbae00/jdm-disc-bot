@@ -20,8 +20,8 @@ async def on_ready():
     print(bot.user.id)
     print('------')
     servers = list(bot.guilds)
-    await bot.say(f"Connected on {str(len(servers))} servers:")
-    await bot.say('\n'.join(server.name for server in servers))
+    print('Connected on '+ str(len(servers)) + 'servers:')
+    print('\n'.join(server.name for server in servers))
 
 @bot.command()
 async def add(ctx, a: int, b: int):
