@@ -19,6 +19,10 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('------')
+    server = list(bot.servers)
+    print('Connected on' + str(len(bot.servers)) + "servers:")
+    for x in range(len(servers)):
+        print(' '+ servers[x-1].name)
 
 @bot.command()
 async def add(ctx, a: int, b: int):
