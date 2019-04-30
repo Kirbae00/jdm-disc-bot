@@ -23,7 +23,7 @@ async def trial(ctx):
      author = ctx.message.author
      role = discord.utils.get(ctx.message.guild.roles, name="Team Recruiter 🎮")
      if role is None:
-        await bot.say('There is no "Team Recruiter" role on this server!')
+        await bot.send('There is no "Team Recruiter" role on this server!')
         return
      else:
         tag = random.choice(role.members)
