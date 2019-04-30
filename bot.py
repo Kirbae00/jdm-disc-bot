@@ -74,9 +74,10 @@ bot.remove_command('help')
 
 @bot.command()
 async def help(ctx):
-    embed = discord.Embed(title="nice bot", description="A Very Nice bot. List of commands are:", color=0xeee657)
+    embed = discord.Embed(title="JDM Application bot", description="Bot for us lazy admins. List of commands are:", color=0xeee657)
 
     embed.add_field(name="$trial", value="tags a random recruiter", inline=False)
+    embed.add_field(name="$accept", value="accepts the user and adds their trial role. Usage: $accept @user", inline=False)
     embed.add_field(name="$info", value="Gives a little info about the bot", inline=False)
     embed.add_field(name="$help", value="Gives this message", inline=False)
 
