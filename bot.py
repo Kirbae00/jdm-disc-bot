@@ -36,9 +36,9 @@ async def greet(ctx):
 async def accept(ctx, user):
     member = user
     role = discord.utils.get(ctx.message.guild.roles, name="Trial")
-    await client.add_roles(member, role)    
+    await bot.add_roles(member, role)    
     
-@bot.command()
+@bot.command(pass_context=True)
 async def trial(ctx):
      author = ctx.message.author
      role = discord.utils.get(ctx.message.guild.roles, name="Team Recruiter \U0001F3AE")
