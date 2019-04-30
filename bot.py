@@ -48,8 +48,8 @@ async def trial(ctx):
         return
      else:
         tag = random.choice(role.members)
-        print(str(tag))
-        await ctx.send("Welcom {}".format(author.mention) + ", thanks for applying. {}".format(author.mention) + " has been assigned to you.")
+        print('selected ' + str(tag) + 'as recruiter for' + str(author))
+        await ctx.send("Welcome {}".format(author.mention) + ", thanks for applying. {}".format(author.mention) + " has been assigned to you.")
 
 @bot.command()
 async def cat(ctx):
