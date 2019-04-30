@@ -77,7 +77,8 @@ bot.remove_command('help')
 @bot.command()
 async def help(ctx):
     embed = discord.Embed(title="JDM Application bot", description="Bot for us lazy admins. List of commands are:", color=0xeee657)
-
+    
+    embed.set_image(url="https://media.discordapp.net/attachments/553318357563080704/564915982544666634/jdmlogo.png")
     embed.add_field(name=BOT_PREFIX + "trial", value="tags a random recruiter", inline=False)
     embed.add_field(name=BOT_PREFIX + "accept", value="accepts the user and adds their trial role. Usage: " + BOT_PREFIX + "accept @user", inline=False)
     embed.add_field(name=BOT_PREFIX + "logo", value="Displays the logo", inline=False)
