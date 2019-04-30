@@ -66,7 +66,7 @@ async def info(ctx):
     embed.add_field(name="Slide's twitch channel", value="[Twitch](<https://www.twitch.tv/mobyinkface>)")
 
 # give users a link to invite thsi bot to their server
-    embed.add_field(name="Invite", value="[Invite link](<https://discordapp.com/api/oauth2/authorize?client_id=572406563873226753&permissions=268781568&scope=bot>)")
+    embed.add_field(name="It's open source", value="[Github link](<https://github.com/Kirbae00/jdm-disc-bot>)")
 
     await ctx.send(embed=embed)
 
