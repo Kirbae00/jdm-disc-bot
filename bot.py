@@ -6,6 +6,7 @@ from discord.utils import get
 BOT_PREFIX = os.environ['prefix'] # -Prfix is need to declare a Command in discord ex: !pizza "!" being the Prefix
 TOKEN = os.environ['token'] # The token is also substituted for security reasons
 DM = os.environ['dm']
+LOGO = os.environ['logo']
 
 bot = commands.Bot(command_prefix=BOT_PREFIX)
 
@@ -53,11 +54,11 @@ async def trial(ctx):
         trial = "selected " + str(tag) + " as recruiter for " + str(author)
         me = bot.get_user(DM)
         await ctx.send("Welcome {}".format(author.mention) + ", thanks for applying. Recruiter {}".format(tag.mention) + " has been assigned to you.")
-       # await me.send(trial)
+        await me.send(trial)
         
 @bot.command()
-async def cat(ctx):
-    await ctx.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
+async def logo(ctx):
+    await ctx.send(LOGO)
 
 @bot.command()
 async def info(ctx):
@@ -82,6 +83,7 @@ async def help(ctx):
 
     embed.add_field(name=BOT_PREFIX + "trial", value="tags a random recruiter", inline=False)
     embed.add_field(name=BOT_PREFIX + "accept", value="accepts the user and adds their trial role. Usage: " + BOT_PREFIX + "accept @user", inline=False)
+    embed.add_field(name=BOT_PREFIX + "logo", value="Displays the logo", inline=False)
     embed.add_field(name=BOT_PREFIX + "info", value="Gives a little info about the bot", inline=False)
     embed.add_field(name=BOT_PREFIX + "help", value="Gives this message", inline=False)
 
