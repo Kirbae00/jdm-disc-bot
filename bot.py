@@ -50,8 +50,8 @@ async def trial(ctx):
      else:
         tag = random.choice(role.members)
         print('selected ' + str(tag) + ' as recruiter for ' + str(author))
-        trial = 'selected ' + str(tag) + ' as recruiter for ' + str(author)
-        me = await bot.get_user_info(DM)
+        trial = "selected " + str(tag) + " as recruiter for " + str(author)
+        me = await self.get_user_info(DM)
         await me.send(trial)
         await ctx.send("Welcome {}".format(author.mention) + ", thanks for applying. {}".format(author.mention) + " has been assigned to you.")
 
