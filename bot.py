@@ -66,15 +66,14 @@ async def logo(ctx):
 @bot.command()
 async def info(ctx):
     embed = discord.Embed(title="JDM Application bot", description="Tags recruiters because we cba.", color=0xeee657)
-
+    embed.set_thumbnail(url="https://media.discordapp.net/attachments/553318357563080704/564915982544666634/jdmlogo.png")
 # give info about you here
     embed.add_field(name="Author", value="<@160455573324824576>")
 
 # Shows the number of servers the bot is member of.
     embed.add_field(name="Slide's twitch channel", value="[Twitch](<https://www.twitch.tv/mobyinkface>)")
 
-# give users a link to invite thsi bot to their server
-    embed.add_field(name="It's open source", value="[Github link](<https://github.com/Kirbae00/jdm-disc-bot>)")
+    embed.add_field(name="This bot is open source", value="[Github link](<https://github.com/Kirbae00/jdm-disc-bot>)")
 
     await ctx.send(embed=embed)
 
