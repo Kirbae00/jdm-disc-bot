@@ -23,7 +23,7 @@ async def on_ready():
     print('------')
     servers = list(bot.guilds)
     print('Connected on '+ str(len(servers)) + ' servers:')
-    print('> \n'.join(server.name for server in servers))
+    print('\n'.join('>'+ server.name for server in servers))
     print('------')
 
 @bot.command()
