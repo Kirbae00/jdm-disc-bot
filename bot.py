@@ -35,7 +35,7 @@ async def greet(ctx):
 @commands.has_role("Team Recruiter \U0001F3AE") # This must be exactly the name of the appropriate role
 async def accept(ctx, user):
     member = user
-    role = get(member.server.roles, name="Trial")
+    role = get(member.guild.roles, name="Trial")
     await bot.add_roles(member, role)    
     
 @bot.command()
