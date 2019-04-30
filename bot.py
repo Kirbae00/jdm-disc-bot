@@ -35,8 +35,8 @@ async def greet(ctx):
 @commands.has_role("Team Recruiter \U0001F3AE") # This must be exactly the name of the appropriate role
 async def accept(ctx, user):
     member = user
-    role = discord.utils.get(ctx.message.guild.roles, name="Trial")
-    await bot.add_roles(member, role)    
+    role = discord.utils.get(ctx.message.guild.roles, name="Trial"
+    await client.add_roles(member, role)    
     
 @bot.command()
 async def trial(ctx):
