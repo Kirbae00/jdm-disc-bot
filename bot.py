@@ -48,7 +48,7 @@ async def cat(ctx):
 
 @bot.command()
 async def info(ctx):
-    embed = discord.Embed(title="nice bot", description="Nicest bot there is ever.", color=0xeee657)
+    embed = discord.Embed(title="JDM Application bot", description="Tags recruiters because we cba.", color=0xeee657)
 
 # give info about you here
     embed.add_field(name="Author", value="<@160455573324824576>")
