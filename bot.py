@@ -5,7 +5,6 @@ from discord.utils import get
 # We'll need to substitute the Prefix for an Enviroment Variable
 BOT_PREFIX = os.environ['prefix'] # -Prfix is need to declare a Command in discord ex: !pizza "!" being the Prefix
 TOKEN = os.environ['token'] # The token is also substituted for security reasons
-DM = os.environ['dm']
 LOGO = os.environ['logo']
 
 bot = commands.Bot(command_prefix=BOT_PREFIX)
@@ -51,10 +50,8 @@ async def trial(ctx):
      else:
         tag = random.choice(role.members)
         print('selected ' + str(tag) + ' as recruiter for ' + str(author))
-        trial = "selected " + str(tag) + " as recruiter for " + str(author)
-        me = bot.get_user_info(DM)
         await ctx.send("Welcome {}".format(author.mention) + ", thanks for applying. Recruiter {}".format(tag.mention) + " has been assigned to you.")
-        await me.send(trial)
+        
         
 @bot.command()
 async def logo(ctx):
