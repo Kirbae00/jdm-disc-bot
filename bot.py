@@ -7,7 +7,6 @@ TOKEN = os.environ['token'] # The token is also substituted for security reasons
 
 client = Bot(command_prefix=BOT_PREFIX)
 
-bot = commands.Bot(command_prefix='$')
 
 @bot.event
 async def on_ready():
