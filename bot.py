@@ -19,10 +19,9 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('------')
-    server = list(bot.servers)
-    print('Connected on' + str(len(bot.servers)) + "servers:")
-    for x in range(len(servers)):
-        print(' '+ servers[x-1].name)
+   servers = list(bot.servers)
+   await bot.say(f"Connected on {str(len(servers))} servers:")
+   await bot.say('\n'.join(server.name for server in servers))
 
 @bot.command()
 async def add(ctx, a: int, b: int):
